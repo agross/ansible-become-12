@@ -1,0 +1,4 @@
+- name: In inner tasks
+  ansible.builtin.package:
+    name: git
+    state: present

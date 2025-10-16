@@ -1,0 +1,10 @@
+- name: Test playbook
+  hosts: all
+  become: true
+  pre_tasks:
+    - name: In pre_tasks
+      ansible.builtin.package:
+        name: git
+        state: present
+  roles:
+    - role: test

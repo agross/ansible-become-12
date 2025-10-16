@@ -1,0 +1,7 @@
+- name: In outer tasks
+  ansible.builtin.package:
+    name: git
+    state: present
+
+- name: Import inner reusable tasks
+  ansible.builtin.import_tasks: shared-tasks-inner.yml
